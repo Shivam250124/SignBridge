@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: signbridge
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn "backend.app:create_app()" --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120 --preload
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.18
+      - key: DEPLOYMENT_MODE
+        value: cloud
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: TTS_ENABLED
+        value: "False"
+      - key: GESTURE_CONFIDENCE_THRESHOLD
+        value: "0.6"
+      - key: PREDICTION_BUFFER_SIZE
+        value: "10"
+      - key: SPEECH_LANGUAGE
+        value: en-IN

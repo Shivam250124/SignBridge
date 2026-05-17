@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}SignBridge - Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-logo-mark">SB</span>
+                Welcome to SignBridge
+            </h1>
+            <p class="hero-subtitle">
+                Real-time 2-way communication platform connecting deaf and hearing individuals
+            </p>
+            <p class="hero-description">
+                Break down communication barriers with AI-powered sign language recognition and speech-to-sign translation
+            </p>
+            <div class="hero-buttons">
+                <a href="/communicate" class="btn btn-primary btn-large">
+                    <i class="fas fa-comments"></i> Start Communicating
+                </a>
+                <a href="#features" class="btn btn-secondary btn-large">
+                    <i class="fas fa-info-circle"></i> Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hand-paper"></i>
+                </div>
+                <h3>Sign Language Recognition</h3>
+                <p>Camera captures ISL gestures and converts them to text in real-time with 99%+ accuracy</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <h3>Speech to Sign</h3>
+                <p>Speak naturally and see your words translated into sign language videos instantly</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <h3>Text-to-Speech</h3>
+                <p>Recognized signs are spoken aloud for hearing users to understand</p>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Live Conversation</h3>
+                <p>See the full conversation history in real-time during your communication session</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Supported Gestures Section -->
+<section class="gestures">
+    <div class="container">
+        <h2 class="section-title">Supported Gestures</h2>
+        
+        <div class="gestures-grid">
+            <div class="gesture-category">
+                <h3><i class="fas fa-hand-point-right"></i> One-Handed (10)</h3>
+                <div class="gesture-list">
+                    <span class="gesture-badge">C</span>
+                    <span class="gesture-badge">I</span>
+                    <span class="gesture-badge">1</span>
+                    <span class="gesture-badge">2</span>
+                    <span class="gesture-badge">3</span>
+                    <span class="gesture-badge">GOOD</span>
+                    <span class="gesture-badge">HELLO</span>
+                    <span class="gesture-badge">BYE</span>
+                    <span class="gesture-badge">THANK YOU</span>
+                    <span class="gesture-badge">WELCOME</span>
+                </div>
+            </div>
+            
+            <div class="gesture-category">
+                <h3><i class="fas fa-hands"></i> Two-Handed (5)</h3>
+                <div class="gesture-list">
+                    <span class="gesture-badge">A</span>
+                    <span class="gesture-badge">B</span>
+                    <span class="gesture-badge">D</span>
+                    <span class="gesture-badge">T</span>
+                    <span class="gesture-badge">X</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Bridge the Communication Gap?</h2>
+        <p>Start your first conversation now - no installation required!</p>
+        <a href="/communicate" class="btn btn-primary btn-large">
+            <i class="fas fa-rocket"></i> Launch SignBridge
+        </a>
+    </div>
+</section>
+{% endblock %}

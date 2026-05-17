@@ -1,0 +1,26 @@
+Flexible Dual Model System
+==========================
+
+One-handed gestures (10):
+  - 1
+  - 2
+  - 3
+  - BYE
+  - C
+  - GOOD
+  - HELLO
+  - I
+  - THANK YOU
+  - WELCOME
+
+Two-handed gestures (5):
+  - A
+  - B
+  - D
+  - T
+  - X
+
+To add new gestures:
+1. Collect gesture data
+2. Update gesture_config in this script
+3. Run training again

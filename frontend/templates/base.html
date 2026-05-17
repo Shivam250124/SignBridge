@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SignBridge - Real-time 2-way communication platform for deaf and hearing individuals">
+    <title>{% block title %}SignBridge - 2-Way Communication{% endblock %}</title>
+
+    <!-- Favicon: SB monogram -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/favicon.svg') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/">
+                    <span class="logo-mark">SB</span>
+                    <span class="brand-name">
+                        <span class="brand-sign">Sign</span><span class="brand-bridge">Bridge</span>
+                    </span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/communicate" class="nav-link btn-primary">Start Communication</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <span class="footer-logo-mark">SB</span>
+                <span class="footer-brand-name">
+                    <span class="brand-sign">Sign</span><span class="brand-bridge">Bridge</span>
+                </span>
+            </div>
+            <p>&copy; 2024 SignBridge. Built with ❤️ for accessibility.</p>
+            <p>Empowering communication between deaf and hearing individuals.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

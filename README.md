@@ -111,14 +111,4 @@ GESTURE_CONFIDENCE_THRESHOLD=0.6
 - **Two-handed model:** 126 features (42 landmarks × 3 axes)
 - **Accuracy:** 99%+ on test set
 
-## Deployment
 
-See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for full step-by-step instructions.
-
-**Quick deploy to Render:**
-1. Push this repo to GitHub
-2. Connect repo on [render.com](https://render.com) — `render.yaml` handles the rest
-3. Set `DEPLOYMENT_MODE=cloud`, `DEBUG=False`, and a strong `SECRET_KEY` in the dashboard
-4. Done — your app is live at `https://signbridge.onrender.com`
-
-> **Note:** In cloud mode the server-side camera stream is disabled. Gesture recognition runs via the `/api/recognize-gesture` endpoint, with the browser sending webcam frames over WebRTC.
